@@ -1,0 +1,27 @@
+{
+  "spike": "OM-005 / D4",
+  "platform": {
+    "system": "Windows",
+    "release": "10",
+    "version": "10.0.26300",
+    "machine": "AMD64",
+    "node": "Leo"
+  },
+  "windows": {
+    "os_caption": "Microsoft Windows 11 Pro\n10.0.26300",
+    "cpu_json": "{\"Name\":\"AMD Ryzen 5 7535U with Radeon Graphics         \",\"Manufacturer\":\"AuthenticAMD\",\"NumberOfCores\":6}",
+    "gpu_json": "{\"Name\":\"AMD Radeon(TM) Graphics\",\"DriverVersion\":\"32.0.21039.2003\",\"AdapterCompatibility\":\"Advanced Micro Devices, Inc.\",\"PNPDeviceID\":\"PCI\\\\VEN_1002\\u0026DEV_1681\\u0026SUBSYS_1F731043\\u0026REV_0D\\\\4\\u002631F4EC98\\u00260\\u00260041\",\"Status\":\"OK\"}"
+  },
+  "cpu": {
+    "Name": "AMD Ryzen 5 7535U with Radeon Graphics         ",
+    "Manufacturer": "AuthenticAMD",
+    "NumberOfCores": 6
+  },
+  "gpu": {
+    "Name": "AMD Radeon(TM) Graphics",
+    "DriverVersion": "32.0.21039.2003",
+    "AdapterCompatibility": "Advanced Micro Devices, Inc.",
+    "PNPDeviceID": "PCI\\VEN_1002&DEV_1681&SUBSYS_1F731043&REV_0D\\4&31F4EC98&0&0041",
+    "Status": "OK"
+  }
+}

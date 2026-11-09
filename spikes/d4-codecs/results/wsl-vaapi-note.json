@@ -1,0 +1,21 @@
+{
+  "spike": "OM-005 / D4",
+  "environment": "WSL2",
+  "raw_report": "uname=Linux Leo 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 GNU/Linux\nffmpeg=ffmpeg version 8.0.1-3ubuntu2 Copyright (c) 2000-2025 the FFmpeg developers\nvainfo=absent\ndri=absent\nenc=libx264 exit=0 bytes=31942\nstderr=\nenc=h264_vaapi exit=218 bytes=0\nstderr=vaapi @ 0x5cfe0ea7ee00] Task finished with error code: -22 (Invalid argument) [vost#0:0/h264_vaapi @ 0x5cfe0ea7ee00] Terminating thread with return code -22 (Invalid argument) [out#0/mp4 @ 0x5cfe0ea7e900] Nothing was written into output file, because at least one of its streams received no packets. \n",
+  "vainfo": "absent",
+  "dri": "absent",
+  "probes": [
+    {
+      "encoder": "libx264",
+      "exit_code": 0,
+      "output_bytes": 31942,
+      "ok": true
+    },
+    {
+      "encoder": "h264_vaapi",
+      "exit_code": 218,
+      "output_bytes": 0,
+      "ok": false
+    }
+  ]
+}

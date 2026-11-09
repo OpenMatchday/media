@@ -16,6 +16,12 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Spike harness and JSON results: `spikes/d3-transport/`. Full write-up: sibling `docs` repo `spikes/d3-media-transport.md`.
 - Numbers in results are transport-only shared-clock probes on one Windows host — not glass-to-glass product targets.
 
+## Notes (OM-005 / D4)
+
+- Provisional encode path: **hardware first** (platform/vendor APIs); software fallback **OpenH264** (BSD). libx264 remains host-tool only (GPL-2.0).
+- Spike harness and JSON results: `spikes/d4-codecs/`. Full write-up: sibling `docs` repo `spikes/d4-codecs-encoders.md`.
+- This Windows AMD host: AMF + Media Foundation encode smokes PASS; NVENC/QSV/VA-API FAIL or unavailable. No live camera capture in this spike.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

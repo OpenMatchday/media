@@ -1,0 +1,61 @@
+{
+  "spike": "OM-005 / D4",
+  "host": {
+    "device": "Leo",
+    "os": "Windows 10 (10.0.26300)",
+    "machine": "AMD64",
+    "python": "3.11.9",
+    "cwd": "media/spikes/d4-codecs"
+  },
+  "ffmpeg": {
+    "version_line": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+    "hwaccels": [
+      "Hardware acceleration methods:",
+      "cuda",
+      "vaapi",
+      "dxva2",
+      "qsv",
+      "d3d11va",
+      "opencl",
+      "vulkan",
+      "d3d12va",
+      "amf"
+    ],
+    "encoder_names_present": [
+      "h264_amf",
+      "h264_mf",
+      "h264_nvenc",
+      "h264_qsv",
+      "h264_vaapi",
+      "hevc_amf",
+      "libx264"
+    ]
+  },
+  "source": {
+    "path": "out/src_1280x720_30_30.yuv",
+    "bytes": 41472000,
+    "frames": 30,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "pix_fmt": "yuv420p"
+  },
+  "probes": [
+    {
+      "encoder": "h264_amf",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 365.726,
+      "output_bytes": 42783,
+      "stderr_tail": ""
+    },
+    {
+      "encoder": "libx264",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 225.278,
+      "output_bytes": 46151,
+      "stderr_tail": ""
+    }
+  ]
+}

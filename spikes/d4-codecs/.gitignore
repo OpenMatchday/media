@@ -1,0 +1,4 @@
+out/
+*.yuv
+*.mp4
+__pycache__/

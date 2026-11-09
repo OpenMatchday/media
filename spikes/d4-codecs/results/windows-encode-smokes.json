@@ -1,0 +1,101 @@
+{
+  "spike": "OM-005 / D4",
+  "host": {
+    "device": "Leo",
+    "os": "Windows 10 (10.0.26300)",
+    "machine": "AMD64",
+    "python": "3.11.9",
+    "cwd": "media/spikes/d4-codecs"
+  },
+  "ffmpeg": {
+    "version_line": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+    "hwaccels": [
+      "Hardware acceleration methods:",
+      "cuda",
+      "vaapi",
+      "dxva2",
+      "qsv",
+      "d3d11va",
+      "opencl",
+      "vulkan",
+      "d3d12va",
+      "amf"
+    ],
+    "encoder_names_present": [
+      "h264_amf",
+      "h264_mf",
+      "h264_nvenc",
+      "h264_qsv",
+      "h264_vaapi",
+      "hevc_amf",
+      "libx264"
+    ]
+  },
+  "source": {
+    "path": "out/src_1280x720_30_90.yuv",
+    "bytes": 124416000,
+    "frames": 90,
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "pix_fmt": "yuv420p"
+  },
+  "probes": [
+    {
+      "encoder": "h264_amf",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 586.29,
+      "output_bytes": 110801,
+      "stderr_tail": ""
+    },
+    {
+      "encoder": "hevc_amf",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 524.228,
+      "output_bytes": 194808,
+      "stderr_tail": ""
+    },
+    {
+      "encoder": "h264_mf",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 382.323,
+      "output_bytes": 293571,
+      "stderr_tail": ""
+    },
+    {
+      "encoder": "libx264",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 351.215,
+      "output_bytes": 249919,
+      "stderr_tail": ""
+    },
+    {
+      "encoder": "h264_nvenc",
+      "ok": false,
+      "exit_code": 4294967295,
+      "elapsed_ms": 71.2,
+      "output_bytes": 0,
+      "stderr_tail": "80] Terminating thread with return code -1 (Operation not permitted)\n[vost#0:0/h264_nvenc @ 0000021c40135180] [enc:h264_nvenc @ 0000021c40126140] Could not open encoder before EOF\n[vost#0:0/h264_nvenc @ 0000021c40135180] Task finished with error code: -22 (Invalid argument)\n[vost#0:0/h264_nvenc @ 0000021c40135180] Terminating thread with return code -22 (Invalid argument)\n[out#0/mp4 @ 0000021c40133940] Nothing was written into output file, because at least one of its streams received no packets."
+    },
+    {
+      "encoder": "h264_qsv",
+      "ok": false,
+      "exit_code": 2981409195,
+      "elapsed_ms": 195.345,
+      "output_bytes": 0,
+      "stderr_tail": "80] Terminating thread with return code -1313558101 (Unknown error occurred)\n[vost#0:0/h264_qsv @ 0000025081ce2dc0] [enc:h264_qsv @ 0000025081cd2ec0] Could not open encoder before EOF\n[vost#0:0/h264_qsv @ 0000025081ce2dc0] Task finished with error code: -22 (Invalid argument)\n[vost#0:0/h264_qsv @ 0000025081ce2dc0] Terminating thread with return code -22 (Invalid argument)\n[out#0/mp4 @ 0000025081c51e00] Nothing was written into output file, because at least one of its streams received no packets."
+    },
+    {
+      "encoder": "h264_vaapi",
+      "ok": false,
+      "exit_code": 4294967256,
+      "elapsed_ms": 77.411,
+      "output_bytes": 0,
+      "stderr_tail": "] Terminating thread with return code -40 (Function not implemented)\n[vost#0:0/h264_vaapi @ 000001e88e764c00] [enc:h264_vaapi @ 000001e88e75a8c0] Could not open encoder before EOF\n[vost#0:0/h264_vaapi @ 000001e88e764c00] Task finished with error code: -22 (Invalid argument)\n[vost#0:0/h264_vaapi @ 000001e88e764c00] Terminating thread with return code -22 (Invalid argument)\n[out#0/mp4 @ 000001e88e6d3200] Nothing was written into output file, because at least one of its streams received no packets."
+    }
+  ]
+}
