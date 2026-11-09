@@ -1,0 +1,176 @@
+{
+  "device": "Leo",
+  "os": "Windows-10-10.0.26300-SP0",
+  "network": "n/a (local on-device OCR; no network required for recognize)",
+  "engine": {
+    "name": "tesseract",
+    "path": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "on_device": true,
+    "cloud": false
+  },
+  "summary": {
+    "fixture_count": 7,
+    "matched": 7,
+    "accuracy_ratio": 1.0
+  },
+  "results": [
+    {
+      "id": "away_score",
+      "field": "score_away",
+      "image": "away_score.png",
+      "expected": "65",
+      "raw_text": "65",
+      "match": true,
+      "mean_word_conf": 0.0,
+      "elapsed_ms": 312.132,
+      "exit_code": 0,
+      "stderr": "",
+      "token_hits": null,
+      "engine": {
+        "name": "tesseract",
+        "lang": "eng",
+        "psm": 8,
+        "oem": 1,
+        "whitelist": "0123456789:",
+        "tessdata_dir": null
+      }
+    },
+    {
+      "id": "board_composite",
+      "field": "composite",
+      "image": "board_composite.png",
+      "expected": "HOME 78  AWAY 65  09:42  P2  SC24",
+      "raw_text": "786509:42224",
+      "match": true,
+      "mean_word_conf": 0.0,
+      "elapsed_ms": 1254.16,
+      "exit_code": 0,
+      "stderr": "",
+      "token_hits": {
+        "score_home": true,
+        "score_away": true,
+        "clock": true,
+        "period": true,
+        "shot_clock": true
+      },
+      "engine": {
+        "name": "tesseract",
+        "lang": "eng",
+        "psm": 6,
+        "oem": 1,
+        "whitelist": "0123456789:",
+        "tessdata_dir": null
+      }
+    },
+    {
+      "id": "clock_mmss",
+      "field": "clock",
+      "image": "clock_mmss.png",
+      "expected": "09:42",
+      "raw_text": "09:42",
+      "match": true,
+      "mean_word_conf": 0.0,
+      "elapsed_ms": 333.228,
+      "exit_code": 0,
+      "stderr": "",
+      "token_hits": null,
+      "engine": {
+        "name": "tesseract",
+        "lang": "eng",
+        "psm": 8,
+        "oem": 1,
+        "whitelist": "0123456789:",
+        "tessdata_dir": null
+      }
+    },
+    {
+      "id": "fouls",
+      "field": "fouls",
+      "image": "fouls.png",
+      "expected": "4",
+      "raw_text": "4",
+      "match": true,
+      "mean_word_conf": 0.0,
+      "elapsed_ms": 1189.171,
+      "exit_code": 0,
+      "stderr": "",
+      "token_hits": null,
+      "engine": {
+        "name": "tesseract",
+        "lang": "eng",
+        "psm": 8,
+        "oem": 1,
+        "whitelist": "0123456789:",
+        "tessdata_dir": null
+      }
+    },
+    {
+      "id": "home_score",
+      "field": "score_home",
+      "image": "home_score.png",
+      "expected": "78",
+      "raw_text": "78",
+      "match": true,
+      "mean_word_conf": 0.0,
+      "elapsed_ms": 313.618,
+      "exit_code": 0,
+      "stderr": "",
+      "token_hits": null,
+      "engine": {
+        "name": "tesseract",
+        "lang": "eng",
+        "psm": 8,
+        "oem": 1,
+        "whitelist": "0123456789:",
+        "tessdata_dir": null
+      }
+    },
+    {
+      "id": "period",
+      "field": "period",
+      "image": "period.png",
+      "expected": "2",
+      "raw_text": "2",
+      "match": true,
+      "mean_word_conf": 0.0,
+      "elapsed_ms": 1229.896,
+      "exit_code": 0,
+      "stderr": "",
+      "token_hits": null,
+      "engine": {
+        "name": "tesseract",
+        "lang": "eng",
+        "psm": 8,
+        "oem": 1,
+        "whitelist": "0123456789:",
+        "tessdata_dir": null
+      }
+    },
+    {
+      "id": "shot_clock",
+      "field": "shot_clock",
+      "image": "shot_clock.png",
+      "expected": "24",
+      "raw_text": "24",
+      "match": true,
+      "mean_word_conf": 0.0,
+      "elapsed_ms": 308.075,
+      "exit_code": 0,
+      "stderr": "",
+      "token_hits": null,
+      "engine": {
+        "name": "tesseract",
+        "lang": "eng",
+        "psm": 8,
+        "oem": 1,
+        "whitelist": "0123456789:",
+        "tessdata_dir": null
+      }
+    }
+  ],
+  "notes": [
+    "Synthetic PNG fixtures only; not live venue photos.",
+    "Accuracy notes are fixture-local for engine choice; not product claims.",
+    "AC-5.2 shape: value=raw_text, confidence=mean_word_conf, timestamp/staleness left to app authority layer."
+  ]
+}

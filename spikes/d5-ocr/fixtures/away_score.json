@@ -1,0 +1,10 @@
+{
+  "id": "away_score",
+  "path": "away_score.png",
+  "field": "score_away",
+  "expected": "65",
+  "expected_tokens": null,
+  "width": 180,
+  "height": 120,
+  "note": "synthetic fictional scoreboard region; not a photo of a live venue"
+}

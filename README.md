@@ -22,6 +22,12 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Spike harness and JSON results: `spikes/d4-codecs/`. Full write-up: sibling `docs` repo `spikes/d4-codecs-encoders.md`.
 - This Windows AMD host: AMF + Media Foundation encode smokes PASS; NVENC/QSV/VA-API FAIL or unavailable. No live camera capture in this spike.
 
+## Notes (OM-006 / D5)
+
+- Provisional OCR engine: **Tesseract 5** + **tessdata_fast eng** (Apache-2.0), on-device only; no cloud OCR.
+- Spike harness and JSON results: `spikes/d5-ocr/`. Full write-up: sibling `docs` repo `spikes/d5-ocr-engine.md`.
+- Model size recorded: `eng.traineddata` 4,113,088 bytes. Synthetic fixture accuracy 7/7 on this Windows host; confidence calibration still open.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

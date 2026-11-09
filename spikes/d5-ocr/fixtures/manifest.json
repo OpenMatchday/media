@@ -1,0 +1,13 @@
+{
+  "fixture_count": 7,
+  "files": [
+    "clock_mmss.png",
+    "shot_clock.png",
+    "home_score.png",
+    "away_score.png",
+    "period.png",
+    "fouls.png",
+    "board_composite.png"
+  ],
+  "fiction": true
+}

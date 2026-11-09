@@ -1,0 +1,10 @@
+{
+  "url": "https://github.com/tesseract-ocr/tessdata_fast/raw/main/eng.traineddata",
+  "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\spikes\\d5-ocr\\tessdata_cache\\eng.traineddata",
+  "bytes": 4113088,
+  "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+  "expected_bytes_github_blob": 4113088,
+  "size_match": true,
+  "license": "Apache-2.0 (tessdata_fast LICENSE)",
+  "license_url": "https://github.com/tesseract-ocr/tessdata_fast/blob/main/LICENSE"
+}

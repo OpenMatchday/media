@@ -1,0 +1,16 @@
+{
+  "id": "board_composite",
+  "path": "board_composite.png",
+  "field": "composite",
+  "expected": "HOME 78  AWAY 65  09:42  P2  SC24",
+  "expected_tokens": {
+    "score_home": "78",
+    "score_away": "65",
+    "clock": "09:42",
+    "period": "2",
+    "shot_clock": "24"
+  },
+  "width": 900,
+  "height": 220,
+  "note": "synthetic fictional scoreboard region; not a photo of a live venue"
+}

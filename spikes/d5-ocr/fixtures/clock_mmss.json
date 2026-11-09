@@ -1,0 +1,10 @@
+{
+  "id": "clock_mmss",
+  "path": "clock_mmss.png",
+  "field": "clock",
+  "expected": "09:42",
+  "expected_tokens": null,
+  "width": 320,
+  "height": 120,
+  "note": "synthetic fictional scoreboard region; not a photo of a live venue"
+}

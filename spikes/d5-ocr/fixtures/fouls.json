@@ -1,0 +1,10 @@
+{
+  "id": "fouls",
+  "path": "fouls.png",
+  "field": "fouls",
+  "expected": "4",
+  "expected_tokens": null,
+  "width": 120,
+  "height": 120,
+  "note": "synthetic fictional scoreboard region; not a photo of a live venue"
+}

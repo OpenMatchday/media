@@ -1,0 +1,10 @@
+{
+  "id": "home_score",
+  "path": "home_score.png",
+  "field": "score_home",
+  "expected": "78",
+  "expected_tokens": null,
+  "width": 180,
+  "height": 120,
+  "note": "synthetic fictional scoreboard region; not a photo of a live venue"
+}

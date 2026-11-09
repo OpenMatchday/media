@@ -1,0 +1,10 @@
+{
+  "id": "shot_clock",
+  "path": "shot_clock.png",
+  "field": "shot_clock",
+  "expected": "24",
+  "expected_tokens": null,
+  "width": 180,
+  "height": 120,
+  "note": "synthetic fictional scoreboard region; not a photo of a live venue"
+}
