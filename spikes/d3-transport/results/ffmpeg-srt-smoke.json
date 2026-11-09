@@ -1,0 +1,14 @@
+{
+  "probe": "ffmpeg-srt-smoke",
+  "ffmpeg_srt_enabled": true,
+  "listen_url": "srt://127.0.0.1:9300?mode=listener&latency=120000",
+  "call_url": "srt://127.0.0.1:9300?mode=caller&latency=120000",
+  "configured_seconds": 3.0,
+  "caller_elapsed_s": 1.3877800000000207,
+  "listener_returncode": 0,
+  "caller_returncode": 0,
+  "caller_stderr_tail": "[h264 @ 000002a370515680] corrupted macroblock 2 2 (total_coeff=-1)\n[h264 @ 000002a370515680] error while decoding MB 2 2\n[in#0/mpegts @ 000002a36e5d3540] Error during demuxing: I/O error\n[h264 @ 000002a370634240] corrupted macroblock 2 2 (total_coeff=-1)\n[h264 @ 000002a370634240] error while decoding MB 2 2\n",
+  "listener_stderr_tail": "",
+  "metric": "SRT session smoke via ffmpeg linked with libsrt; not packet latency",
+  "host_time_unix": 1794212988.1495256
+}

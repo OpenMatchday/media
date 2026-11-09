@@ -1,0 +1,25 @@
+{
+  "probe": "udp-rtp-shaped",
+  "label": "udp-rtp-wifi-nic",
+  "bind": "10.200.78.185",
+  "dest": "10.200.78.185",
+  "port": 5005,
+  "rate_hz": 200.0,
+  "payload_bytes": 1200,
+  "rfc": "RFC 3550 header layout (PT=96 dynamic; not a registered clock rate)",
+  "metric": "one-way latency via shared host clock; not glass-to-glass",
+  "summary": {
+    "packets_sent": 1000,
+    "packets_received": 1000,
+    "packets_lost_estimate": 0,
+    "loss_ratio": 0.0,
+    "seq_gap_estimate": 0,
+    "latency_ms_min": 0.0,
+    "latency_ms_mean": 0.1284019,
+    "latency_ms_p50": 0.0,
+    "latency_ms_p95": 0.5787349999999997,
+    "latency_ms_p99": 0.8934469999999997,
+    "latency_ms_max": 3.0501
+  },
+  "host_time_unix": 1794212971.5254278
+}

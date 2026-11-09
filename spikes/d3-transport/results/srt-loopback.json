@@ -1,0 +1,26 @@
+{
+  "probe": "srt",
+  "label": "srt-loopback",
+  "listen_host": "127.0.0.1",
+  "listen_port": 9200,
+  "call_host": "127.0.0.1",
+  "rate_hz": 200.0,
+  "payload_bytes": 1200,
+  "configured_latency_ms": 120,
+  "impl_crate": "srt-tokio 0.4.4 (Apache-2.0)",
+  "impl_note": "spike probe only; production path intends Haivision libsrt MPL-2.0",
+  "metric": "one-way latency via shared host clock; not glass-to-glass",
+  "summary": {
+    "packets_sent": 1000,
+    "packets_received": 1000,
+    "packets_lost_estimate": 0,
+    "loss_ratio": 0.0,
+    "latency_ms_min": 120.263,
+    "latency_ms_mean": 125.60153089999999,
+    "latency_ms_p50": 125.5291,
+    "latency_ms_p95": 128.10363999999998,
+    "latency_ms_p99": 128.790695,
+    "latency_ms_max": 130.1027
+  },
+  "host_time_unix": 1794213050.8859773
+}
