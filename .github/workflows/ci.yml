@@ -18,3 +18,5 @@ jobs:
         run: |
           test -f README.md
           test -f LICENSE
+      - name: Media medium gate
+        run: python3 gates/media_medium.py

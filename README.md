@@ -28,6 +28,12 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Spike harness and JSON results: `spikes/d5-ocr/`. Full write-up: sibling `docs` repo `spikes/d5-ocr-engine.md`.
 - Model size recorded: `eng.traineddata` 4,113,088 bytes. Synthetic fixture accuracy 7/7 on this Windows host; confidence calibration still open.
 
+## Notes (OM-011 / AC-1.3)
+
+- Media plane allowlist: **wifi** and **ethernet** only. Cellular and BLE are refused.
+- Gate script: `gates/media_medium.py` (`MEDIA_MEDIUM_GATE_OK`). Enforced in Flutter `MediaBridge.startMedia` and native MethodChannel stubs before transport starts.
+- Live NIC/transport detection deferred to capture path; citations in `gates/README.md`.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
