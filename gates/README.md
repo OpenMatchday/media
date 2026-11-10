@@ -63,3 +63,13 @@ python gates/source_health.py
 Expect `SOURCE_HEALTH_OK`. Self-check walks connected/degraded/lost, drops
 cam-1, and applies freeze/slate/alternate Program safe states without ending
 the session.
+
+## Output combination G7 (OM-026)
+
+```bash
+python gates/output_combination.py
+```
+
+Expect `OUTPUT_COMBINATION_OK`. Self-check verifies release gates for
+`16:9` / `9:16` / `1:1` support flags plus concurrent lavfi sustain of
+recording + three live aspects. Does not promote capability-matrix cells.

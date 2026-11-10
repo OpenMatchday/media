@@ -1,0 +1,111 @@
+{
+  "ok": true,
+  "task": "OM-026",
+  "ac": [
+    "AC-3.1",
+    "AC-3.11"
+  ],
+  "gate": "G7",
+  "self_check": false,
+  "medium": "ethernet",
+  "host": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "support_flags": {
+    "recording": "unverified",
+    "aspects": {
+      "16:9": "unverified",
+      "9:16": "unverified",
+      "1:1": "unverified"
+    },
+    "multi_output_2plus": "unverified",
+    "note": "Flags stay unverified until director-class sustain is reviewed (AC-3.11 / G7 / OM-047). Harness sustain != release enablement."
+  },
+  "gate_results": [
+    {
+      "name": "empty",
+      "allowed": true,
+      "expect_release": true,
+      "ok": true
+    },
+    {
+      "name": "recording_plus_16x9_unverified",
+      "allowed": false,
+      "expect_release": false,
+      "ok": true
+    },
+    {
+      "name": "all_aspects_unverified",
+      "allowed": false,
+      "expect_release": false,
+      "ok": true
+    },
+    {
+      "name": "measured_partial_combo",
+      "allowed": true,
+      "expect_release": true,
+      "ok": true
+    },
+    {
+      "name": "combo_verified_aspect_missing",
+      "allowed": false,
+      "expect_release": false,
+      "ok": true
+    }
+  ],
+  "sustain": {
+    "recording": true,
+    "live_aspects": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ],
+    "combination_key": "recording+16:9+1:1+9:16",
+    "segment_seconds": 2.0,
+    "wall_ms": 1943.506,
+    "outputs": [
+      {
+        "label": "recording",
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\output_combination\\recording_20261110T180352Z.mp4",
+        "ok": true,
+        "exit": 0,
+        "bytes": 54863,
+        "elapsed_ms": 1405.069,
+        "stderr_tail": ""
+      },
+      {
+        "label": "live_16x9",
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\output_combination\\live_16x9_20261110T180352Z.mp4",
+        "ok": true,
+        "exit": 0,
+        "bytes": 54863,
+        "elapsed_ms": 1517.976,
+        "stderr_tail": ""
+      },
+      {
+        "label": "live_9x16",
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\output_combination\\live_9x16_20261110T180352Z.mp4",
+        "ok": true,
+        "exit": 0,
+        "bytes": 48593,
+        "elapsed_ms": 1542.544,
+        "stderr_tail": ""
+      },
+      {
+        "label": "live_1x1",
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\output_combination\\live_1x1_20261110T180352Z.mp4",
+        "ok": true,
+        "exit": 0,
+        "bytes": 48936,
+        "elapsed_ms": 1584.714,
+        "stderr_tail": ""
+      }
+    ],
+    "sustained": true
+  },
+  "release_enablement": false,
+  "saved_at": "2026-11-10T18:03:54Z"
+}

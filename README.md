@@ -69,6 +69,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Harness: `preview/run_source_health.py` (`SOURCE_HEALTH_OK` via `--self-check`); gate `gates/source_health.py`.
 - Results under `measurements/results/om017_source_health_*.json`.
 
+## Notes (OM-026 / output combination enablement + G7)
+
+- Live aspects `16:9`, `9:16`, `1:1` plus recording; release enablement requires measured aspect flags and combination sustain (AC-3.1 / AC-3.11).
+- Harness: `preview/run_output_combination.py` (`OUTPUT_COMBINATION_OK` via `--self-check`); gate `gates/output_combination.py`.
+- Results under `measurements/results/om026_output_combination_*.json`. Support flags stay unverified until OM-047; harness sustain does not auto-enable release.
+- App-side gates live in sibling `app` (`CapabilityMatrix` + Director Outputs panel).
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
