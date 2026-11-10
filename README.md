@@ -41,6 +41,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Measurement log started under `measurements/` (G1/G2 start; dual-device glass-to-glass still pending).
 - App Director Preview bus control is in sibling `app`; this repo owns frames/transport.
 
+## Notes (OM-014 / two cameras + independent audio)
+
+- Two Preview paths (cam-1 / cam-2) over SRT on adjacent ports; snapshots under `preview/out/`.
+- Harness: `preview/run_two_cameras_audio.py` (`TWO_CAMERAS_AUDIO_OK` via `--self-check`).
+- Audio source is selectable and recorded as not following video Program (AC-2.4); peak/RMS meters via ffmpeg `astats` (AC-2.5).
+- If only one usable dshow video device is present, cam-2 falls back to lavfi `testsrc` and that is written into the measurement JSON.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

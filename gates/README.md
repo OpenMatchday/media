@@ -28,3 +28,11 @@ python gates/one_camera_preview.py
 ```
 
 Expect `ONE_CAMERA_PREVIEW_OK`. Requires `ffmpeg` with SRT (`--enable-libsrt` or distro equivalent).
+
+## Two cameras + independent audio (OM-014)
+
+```bash
+python gates/two_cameras_audio.py
+```
+
+Expect `TWO_CAMERAS_AUDIO_OK`. Self-check uses two lavfi `testsrc` paths plus lavfi `sine` audio meters.

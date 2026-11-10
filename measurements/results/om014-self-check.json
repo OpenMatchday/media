@@ -1,0 +1,126 @@
+{
+  "task": "OM-014",
+  "acs": [
+    "AC-2.4",
+    "AC-2.5"
+  ],
+  "started_utc": "2026-11-10T12:48:55.516041+00:00",
+  "device": {
+    "hostname": "Leo",
+    "os": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9"
+  },
+  "network": {
+    "medium": "wifi",
+    "bind_host": "127.0.0.1",
+    "note": "loopback or NIC hairpin; dual camera paths on one host"
+  },
+  "codec": {
+    "encoder": "libx264",
+    "hardware_preferred": false
+  },
+  "cameras": [
+    {
+      "camera_id": "cam-1",
+      "spec": {
+        "source": "testsrc",
+        "device": null,
+        "id": "cam-1",
+        "note": "lavfi testsrc",
+        "source_mode": "testsrc",
+        "label": "cam-1"
+      },
+      "result": {
+        "ok": true,
+        "listen_url": "srt://127.0.0.1:9410?mode=listener&latency=120000",
+        "call_url": "srt://127.0.0.1:9410?mode=caller&latency=120000",
+        "snapshot_path": "preview/out/director_preview_cam1.jpg",
+        "snapshot_bytes": 20739,
+        "ffprobe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "mjpeg",
+              "width": 1280,
+              "height": 720
+            }
+          ]
+        },
+        "wall_elapsed_s": 2.64066929999899,
+        "sender_returncode": 0,
+        "receiver_returncode": 0,
+        "sender_stderr_tail": "",
+        "receiver_stderr_tail": ""
+      }
+    },
+    {
+      "camera_id": "cam-2",
+      "spec": {
+        "source": "testsrc",
+        "device": null,
+        "id": "cam-2",
+        "note": "lavfi testsrc (second path)",
+        "source_mode": "testsrc",
+        "label": "cam-2"
+      },
+      "result": {
+        "ok": true,
+        "listen_url": "srt://127.0.0.1:9411?mode=listener&latency=120000",
+        "call_url": "srt://127.0.0.1:9411?mode=caller&latency=120000",
+        "snapshot_path": "preview/out/director_preview_cam2.jpg",
+        "snapshot_bytes": 20739,
+        "ffprobe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "mjpeg",
+              "width": 1280,
+              "height": 720
+            }
+          ]
+        },
+        "wall_elapsed_s": 2.6060289999986708,
+        "sender_returncode": 0,
+        "receiver_returncode": 0,
+        "sender_stderr_tail": "",
+        "receiver_stderr_tail": ""
+      }
+    }
+  ],
+  "audio": {
+    "selected": {
+      "id": "aud-1",
+      "source": "sine",
+      "device": null,
+      "follows_video_program": false,
+      "follows_preview_source": false,
+      "available_devices": [
+        "Microphone Array (AMD Audio Device)"
+      ]
+    },
+    "measurement": {
+      "source_mode": "sine",
+      "follows_video": false,
+      "generator": "sine=1000Hz",
+      "ok": true,
+      "returncode": 0,
+      "wall_elapsed_s": 0.18557110000074317,
+      "meters": {
+        "ok": true,
+        "peak_db": -18.063656,
+        "rms_db": -21.101784,
+        "samples": 2,
+        "peak_db_min": -18.063656,
+        "peak_db_last": -18.063656
+      },
+      "stderr_tail": "52\n[Parsed_astats_0 @ 000001d5371d3fc0] Flat factor: 0.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Peak count: 42\n[Parsed_astats_0 @ 000001d5371d3fc0] Abs Peak count: 42\n[Parsed_astats_0 @ 000001d5371d3fc0] Noise floor dB: nan\n[Parsed_astats_0 @ 000001d5371d3fc0] Noise floor count: 0\n[Parsed_astats_0 @ 000001d5371d3fc0] Entropy: 0.294990\n[Parsed_astats_0 @ 000001d5371d3fc0] Bit depth: 12/16/16/16\n[Parsed_astats_0 @ 000001d5371d3fc0] Dynamic range: 23.714853\n[Parsed_astats_0 @ 000001d5371d3fc0] Zero crossings: 43\n[Parsed_astats_0 @ 000001d5371d3fc0] Zero crossings rate: 0.041992\n[Parsed_astats_0 @ 000001d5371d3fc0] Overall\n[Parsed_astats_0 @ 000001d5371d3fc0] DC offset: 0.000106\n[Parsed_astats_0 @ 000001d5371d3fc0] Min level: -4095.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Max level: 4095.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Min difference: 35.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Max difference: 535.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Mean difference: 342.889541\n[Parsed_astats_0 @ 000001d5371d3fc0] RMS difference: 380.067548\n[Parsed_astats_0 @ 000001d5371d3fc0] Peak level dB: -18.063656\n[Parsed_astats_0 @ 000001d5371d3fc0] RMS level dB: -21.101784\n[Parsed_astats_0 @ 000001d5371d3fc0] RMS peak dB: -21.101784\n[Parsed_astats_0 @ 000001d5371d3fc0] RMS through dB: -21.101784\n[Parsed_astats_0 @ 000001d5371d3fc0] Flat factor: 0.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Peak count: 42.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Abs Peak count: 42.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Noise floor dB: nan\n[Parsed_astats_0 @ 000001d5371d3fc0] Noise floor count: 0.000000\n[Parsed_astats_0 @ 000001d5371d3fc0] Entropy: 0.294990\n[Parsed_astats_0 @ 000001d5371d3fc0] Bit depth: 12/16/16/16\n[Parsed_astats_0 @ 000001d5371d3fc0] Number of samples: 1024\n[out#0/null @ 000001d5371e62c0] video:0KiB audio:188KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:02.00 bitrate=N/A speed=66.6x elapsed=0:00:00.03    \n"
+    },
+    "meters_visible_fields": [
+      "peak_db",
+      "rms_db"
+    ]
+  },
+  "ok": true
+}

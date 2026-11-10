@@ -26,3 +26,5 @@ jobs:
           sudo apt-get install -y ffmpeg
       - name: One camera preview self-check
         run: python3 gates/one_camera_preview.py
+      - name: Two cameras and independent audio self-check
+        run: python3 gates/two_cameras_audio.py

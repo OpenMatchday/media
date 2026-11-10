@@ -1,0 +1,134 @@
+{
+  "task": "OM-014",
+  "acs": [
+    "AC-2.4",
+    "AC-2.5"
+  ],
+  "started_utc": "2026-11-10T12:49:59.717094+00:00",
+  "device": {
+    "hostname": "Leo",
+    "os": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9"
+  },
+  "network": {
+    "medium": "wifi",
+    "bind_host": "10.200.78.185",
+    "note": "loopback or NIC hairpin; dual camera paths on one host"
+  },
+  "codec": {
+    "encoder": "h264_amf",
+    "hardware_preferred": true
+  },
+  "cameras": [
+    {
+      "camera_id": "cam-1",
+      "spec": {
+        "source": "camera",
+        "device": "ASUS HD webcam",
+        "id": "cam-1",
+        "note": "dshow video",
+        "inventory": [
+          "ASUS HD webcam",
+          "LSVCam"
+        ],
+        "source_mode": "camera",
+        "label": "cam-1"
+      },
+      "result": {
+        "ok": true,
+        "listen_url": "srt://10.200.78.185:9410?mode=listener&latency=120000",
+        "call_url": "srt://10.200.78.185:9410?mode=caller&latency=120000",
+        "snapshot_path": "preview/out/director_preview_cam1.jpg",
+        "snapshot_bytes": 5620,
+        "ffprobe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "mjpeg",
+              "width": 1280,
+              "height": 720
+            }
+          ]
+        },
+        "wall_elapsed_s": 7.265611600001648,
+        "sender_returncode": 0,
+        "receiver_returncode": 0,
+        "sender_stderr_tail": "[in#0/dshow @ 000001d69e784640] real-time buffer [ASUS HD webcam] [video input] too full or near too full (121% of size: 3041280 [rtbufsize parameter])! frame dropped!\r\n    Last message repeated 14 times\r\n[in#0/dshow @ 000001d69e784640] real-time buffer [ASUS HD webcam] [video input] too full or near too full (121% of size: 3041280 [rtbufsize parameter])! frame dropped!\r\n",
+        "receiver_stderr_tail": ""
+      }
+    },
+    {
+      "camera_id": "cam-2",
+      "spec": {
+        "source": "testsrc",
+        "device": null,
+        "id": "cam-2",
+        "note": "fallback lavfi testsrc; only one usable dshow video device",
+        "inventory": [
+          "ASUS HD webcam",
+          "LSVCam"
+        ],
+        "source_mode": "testsrc",
+        "label": "cam-2"
+      },
+      "result": {
+        "ok": true,
+        "listen_url": "srt://10.200.78.185:9411?mode=listener&latency=120000",
+        "call_url": "srt://10.200.78.185:9411?mode=caller&latency=120000",
+        "snapshot_path": "preview/out/director_preview_cam2.jpg",
+        "snapshot_bytes": 20329,
+        "ffprobe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "mjpeg",
+              "width": 1280,
+              "height": 720
+            }
+          ]
+        },
+        "wall_elapsed_s": 2.974250100000063,
+        "sender_returncode": 0,
+        "receiver_returncode": 0,
+        "sender_stderr_tail": "",
+        "receiver_stderr_tail": ""
+      }
+    }
+  ],
+  "audio": {
+    "selected": {
+      "id": "aud-1",
+      "source": "device",
+      "device": "Microphone Array (AMD Audio Device)",
+      "follows_video_program": false,
+      "follows_preview_source": false,
+      "available_devices": [
+        "Microphone Array (AMD Audio Device)"
+      ]
+    },
+    "measurement": {
+      "source_mode": "device",
+      "follows_video": false,
+      "device": "Microphone Array (AMD Audio Device)",
+      "ok": true,
+      "returncode": 0,
+      "wall_elapsed_s": 4.247376299999814,
+      "meters": {
+        "ok": true,
+        "peak_db": -90.308734,
+        "rms_db": -96.671378,
+        "samples": 3,
+        "peak_db_min": -90.308734,
+        "peak_db_last": -90.308734
+      },
+      "stderr_tail": "arsed_astats_0 @ 000002105f012d00] Flat factor: 2.167343\n[Parsed_astats_0 @ 000002105f012d00] Peak count: 5095\n[Parsed_astats_0 @ 000002105f012d00] Abs Peak count: 5095\n[Parsed_astats_0 @ 000002105f012d00] Noise floor dB: -inf\n[Parsed_astats_0 @ 000002105f012d00] Noise floor count: 8776\n[Parsed_astats_0 @ 000002105f012d00] Entropy: -0.000000\n[Parsed_astats_0 @ 000002105f012d00] Bit depth: 1/16/16/16\n[Parsed_astats_0 @ 000002105f012d00] Dynamic range: 6.020600\n[Parsed_astats_0 @ 000002105f012d00] Zero crossings: 2489\n[Parsed_astats_0 @ 000002105f012d00] Zero crossings rate: 0.112880\n[Parsed_astats_0 @ 000002105f012d00] Overall\n[Parsed_astats_0 @ 000002105f012d00] DC offset: 0.000000\n[Parsed_astats_0 @ 000002105f012d00] Min level: -1.000000\n[Parsed_astats_0 @ 000002105f012d00] Max level: 1.000000\n[Parsed_astats_0 @ 000002105f012d00] Min difference: 0.000000\n[Parsed_astats_0 @ 000002105f012d00] Max difference: 2.000000\n[Parsed_astats_0 @ 000002105f012d00] Mean difference: 0.398703\n[Parsed_astats_0 @ 000002105f012d00] RMS difference: 0.667701\n[Parsed_astats_0 @ 000002105f012d00] Peak level dB: -90.308734\n[Parsed_astats_0 @ 000002105f012d00] RMS level dB: -96.695739\n[Parsed_astats_0 @ 000002105f012d00] RMS peak dB: -96.418699\n[Parsed_astats_0 @ 000002105f012d00] RMS through dB: -98.867417\n[Parsed_astats_0 @ 000002105f012d00] Flat factor: 2.170785\n[Parsed_astats_0 @ 000002105f012d00] Peak count: 5066.500000\n[Parsed_astats_0 @ 000002105f012d00] Abs Peak count: 5066.500000\n[Parsed_astats_0 @ 000002105f012d00] Noise floor dB: -inf\n[Parsed_astats_0 @ 000002105f012d00] Noise floor count: 8808.500000\n[Parsed_astats_0 @ 000002105f012d00] Entropy: 0.000000\n[Parsed_astats_0 @ 000002105f012d00] Bit depth: 1/16/16/16\n[Parsed_astats_0 @ 000002105f012d00] Number of samples: 22050\n[out#0/null @ 000002105f0ae540] video:0KiB audio:337KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:00:02.00 bitrate=N/A speed=0.794x elapsed=0:00:02.51    \n"
+    },
+    "meters_visible_fields": [
+      "peak_db",
+      "rms_db"
+    ]
+  },
+  "ok": true
+}
