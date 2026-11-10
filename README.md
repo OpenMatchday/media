@@ -83,6 +83,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Regions omit fields absent for a sport variant (e.g. no `shot_clock` for basketball/youth or futsal). Normalized corners reproject across scale/rotation (AC-4.6).
 - UI + Dart geometry mirror live in sibling `app` (`lib/calibration/`).
 
+## Notes (OM-031 / OCR regions + camera-move)
+
+- Region OCR readings carry value, calibrated confidence, timestamp, staleness (AC-5.2). Confidence prefers Tesseract TSV conf/100 when >0, else digit-parse quality (D5 TSV-zero caveat).
+- Camera-move detect: corner-patch fingerprint MAD vs freeze reference; threshold = midpoint of measured same-frame and shifted-frame MAD. Move marks readings + live crops stale and requires recalibration (AC-4.7).
+- Modules: `ocr/`. Harness: `preview/run_ocr_regions.py` (`OCR_REGIONS_OK`); gate `gates/ocr_regions.py`.
+- App authority gate remains `minConfidence=0.7` against the calibrated signal.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

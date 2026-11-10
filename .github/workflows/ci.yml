@@ -20,10 +20,10 @@ jobs:
           test -f LICENSE
       - name: Media medium gate
         run: python3 gates/media_medium.py
-      - name: Install ffmpeg
+      - name: Install ffmpeg, tesseract, pillow
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          sudo apt-get install -y ffmpeg tesseract-ocr tesseract-ocr-eng python3-pil
       - name: One camera preview self-check
         run: python3 gates/one_camera_preview.py
       - name: Two cameras and independent audio self-check
@@ -40,3 +40,5 @@ jobs:
         run: python3 gates/output_combination.py
       - name: Four-corner calibration self-check
         run: python3 gates/calibration.py
+      - name: OCR regions + camera-move self-check
+        run: python3 gates/ocr_regions.py

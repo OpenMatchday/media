@@ -83,3 +83,14 @@ python gates/calibration.py
 Expect `CALIBRATION_OK`. Self-check freezes a synthetic board, validates
 TL/TR/BR/BL, computes homography, writes a rectified preview, checks
 scale/rotation resilience, and verifies sport region allowlists.
+
+## OCR regions + camera-move (OM-031)
+
+```bash
+python gates/ocr_regions.py
+```
+
+Expect `OCR_REGIONS_OK`. Requires Tesseract + tessdata eng (and Pillow).
+Self-check reads D5 synthetic region fixtures with calibrated confidence,
+detects synthetic camera move via corner fingerprint MAD, marks readings and
+live crops stale, and requires recalibration before trust resumes.

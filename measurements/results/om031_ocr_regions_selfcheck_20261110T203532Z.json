@@ -1,0 +1,278 @@
+{
+  "task": "OM-031",
+  "device": "Leo",
+  "os": "Windows-10-10.0.26300-SP0",
+  "network": "n/a (local on-device OCR + synthetic move detect)",
+  "min_confidence": 0.7,
+  "confidence_units": {
+    "clean_digit_parse": {
+      "confidence": 1.0,
+      "signal": "digit_parse_quality",
+      "mean_word_conf": 0.0,
+      "digit_parse_quality": 1.0
+    },
+    "empty_digit_parse": {
+      "confidence": 0.0,
+      "signal": "digit_parse_quality",
+      "mean_word_conf": 0.0,
+      "digit_parse_quality": 0.0
+    },
+    "tsv_override": {
+      "confidence": 0.91,
+      "signal": "tesseract_tsv_conf",
+      "mean_word_conf": 91.0,
+      "digit_parse_quality": 1.0
+    },
+    "min_confidence": 0.7,
+    "ok": true
+  },
+  "ocr": {
+    "engine": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "fixture_count": 6,
+    "matched": 6,
+    "readings": [
+      {
+        "field": "clock",
+        "value": "09:42",
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:25.733308Z",
+        "stale": false,
+        "raw_text": "09:42",
+        "confidence_signal": "digit_parse_quality",
+        "expected": "09:42",
+        "match": true,
+        "meta": {
+          "exit_code": 0,
+          "elapsed_ms": 1105.312,
+          "mean_word_conf": 0.0,
+          "calibrated": {
+            "confidence": 1.0,
+            "signal": "digit_parse_quality",
+            "mean_word_conf": 0.0,
+            "digit_parse_quality": 1.0
+          },
+          "stderr_tail": ""
+        }
+      },
+      {
+        "field": "shot_clock",
+        "value": 24,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:27.362523Z",
+        "stale": false,
+        "raw_text": "24",
+        "confidence_signal": "digit_parse_quality",
+        "expected": "24",
+        "match": true,
+        "meta": {
+          "exit_code": 0,
+          "elapsed_ms": 1619.771,
+          "mean_word_conf": 0.0,
+          "calibrated": {
+            "confidence": 1.0,
+            "signal": "digit_parse_quality",
+            "mean_word_conf": 0.0,
+            "digit_parse_quality": 1.0
+          },
+          "stderr_tail": ""
+        }
+      },
+      {
+        "field": "home_score",
+        "value": 78,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:28.421288Z",
+        "stale": false,
+        "raw_text": "78",
+        "confidence_signal": "digit_parse_quality",
+        "expected": "78",
+        "match": true,
+        "meta": {
+          "exit_code": 0,
+          "elapsed_ms": 1049.097,
+          "mean_word_conf": 0.0,
+          "calibrated": {
+            "confidence": 1.0,
+            "signal": "digit_parse_quality",
+            "mean_word_conf": 0.0,
+            "digit_parse_quality": 1.0
+          },
+          "stderr_tail": ""
+        }
+      },
+      {
+        "field": "away_score",
+        "value": 65,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:29.998855Z",
+        "stale": false,
+        "raw_text": "65",
+        "confidence_signal": "digit_parse_quality",
+        "expected": "65",
+        "match": true,
+        "meta": {
+          "exit_code": 0,
+          "elapsed_ms": 1568.739,
+          "mean_word_conf": 0.0,
+          "calibrated": {
+            "confidence": 1.0,
+            "signal": "digit_parse_quality",
+            "mean_word_conf": 0.0,
+            "digit_parse_quality": 1.0
+          },
+          "stderr_tail": ""
+        }
+      },
+      {
+        "field": "period",
+        "value": 2,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:31.012310Z",
+        "stale": false,
+        "raw_text": "2",
+        "confidence_signal": "digit_parse_quality",
+        "expected": "2",
+        "match": true,
+        "meta": {
+          "exit_code": 0,
+          "elapsed_ms": 1007.221,
+          "mean_word_conf": 0.0,
+          "calibrated": {
+            "confidence": 1.0,
+            "signal": "digit_parse_quality",
+            "mean_word_conf": 0.0,
+            "digit_parse_quality": 1.0
+          },
+          "stderr_tail": ""
+        }
+      },
+      {
+        "field": "home_fouls",
+        "value": 4,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:32.537919Z",
+        "stale": false,
+        "raw_text": "4",
+        "confidence_signal": "digit_parse_quality",
+        "expected": "4",
+        "match": true,
+        "meta": {
+          "exit_code": 0,
+          "elapsed_ms": 1518.546,
+          "mean_word_conf": 0.0,
+          "calibrated": {
+            "confidence": 1.0,
+            "signal": "digit_parse_quality",
+            "mean_word_conf": 0.0,
+            "digit_parse_quality": 1.0
+          },
+          "stderr_tail": ""
+        }
+      }
+    ],
+    "ok": true
+  },
+  "move_detect": {
+    "same_mad": 0.0,
+    "moved_mad": 31.2344,
+    "threshold": 15.6172,
+    "stable": {
+      "moved": false,
+      "mad": 0.0,
+      "threshold": 15.6172,
+      "message": "geometry_stable"
+    },
+    "shifted": {
+      "moved": true,
+      "mad": 31.2344,
+      "threshold": 15.6172,
+      "message": "camera_move_detected"
+    },
+    "fingerprint_count": 256,
+    "freeze_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\ocr_regions\\freeze_board.png",
+    "moved_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\ocr_regions\\moved_board.png",
+    "ok": true
+  },
+  "stale_after_move": {
+    "readings": [
+      {
+        "field": "clock",
+        "value": "09:42",
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:25.733308Z",
+        "stale": true,
+        "raw_text": "09:42",
+        "confidence_signal": "digit_parse_quality"
+      },
+      {
+        "field": "shot_clock",
+        "value": 24,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:27.362523Z",
+        "stale": true,
+        "raw_text": "24",
+        "confidence_signal": "digit_parse_quality"
+      },
+      {
+        "field": "home_score",
+        "value": 78,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:28.421288Z",
+        "stale": true,
+        "raw_text": "78",
+        "confidence_signal": "digit_parse_quality"
+      },
+      {
+        "field": "away_score",
+        "value": 65,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:29.998855Z",
+        "stale": true,
+        "raw_text": "65",
+        "confidence_signal": "digit_parse_quality"
+      },
+      {
+        "field": "period",
+        "value": 2,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:31.012310Z",
+        "stale": true,
+        "raw_text": "2",
+        "confidence_signal": "digit_parse_quality"
+      },
+      {
+        "field": "home_fouls",
+        "value": 4,
+        "confidence": 1.0,
+        "captured_at": "2026-11-10T20:35:32.537919Z",
+        "stale": true,
+        "raw_text": "4",
+        "confidence_signal": "digit_parse_quality"
+      }
+    ],
+    "live_crops_stale": true,
+    "recalibration_required": true,
+    "trust_ocr": false,
+    "trust_live_crops": false,
+    "ok": true
+  },
+  "after_recalibration": {
+    "recalibration_required": false,
+    "live_crops_stale": false,
+    "readings_stale": false,
+    "trust_ocr": true,
+    "trust_live_crops": true,
+    "ok": true
+  },
+  "checks": {
+    "readings_with_confidence_timestamp_staleness": true,
+    "move_detect_marks_stale": true,
+    "recalibration_required": true,
+    "low_confidence_below_gate": true
+  },
+  "notes": [
+    "Synthetic D5 fixtures + synthetic freeze board only; not live venue photos.",
+    "Confidence: TSV conf/100 when >0 else digit_parse_quality (D5 TSV-zero caveat).",
+    "Camera-move threshold = midpoint of measured same_mad and moved_mad."
+  ]
+}
