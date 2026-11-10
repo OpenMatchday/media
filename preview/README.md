@@ -28,3 +28,21 @@ Snapshots: `preview/out/director_preview_cam1.jpg`, `preview/out/director_previe
 When only one usable dshow video device is present, cam-2 uses lavfi `testsrc` and the JSON records that fallback.
 
 Media plane mediums: **wifi** / **ethernet** only (`gates/media_medium.py`).
+
+## Cut/Take G3 (OM-015)
+
+```text
+python preview/run_cut_take.py --self-check
+python preview/run_cut_take.py --action take --with-srt
+```
+
+Expect `CUT_TAKE_OK`. Results: `measurements/results/g3_cut_take_*.json`.
+
+## A/V sync + drift G5 (OM-016)
+
+```text
+python preview/run_av_sync.py --self-check
+python preview/run_av_sync.py --offset-ms 80 --drift-per-sample-ms 5 --samples 5
+```
+
+Expect `AV_SYNC_OK`. Results: `measurements/results/g5_av_sync_*.json`.

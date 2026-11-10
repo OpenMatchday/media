@@ -55,6 +55,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - G3 records measured `cut_latency_ms` for Program identity apply under `measurements/results/`.
 - Tally on the Program camera is a control-plane side effect (AC-2.3); UI lives in sibling `app`.
 
+## Notes (OM-016 / A/V sync + G5)
+
+- Sync monitor measures audio-vs-video `start_time` offset after a known lavfi `itsoffset` inject (AC-2.6).
+- Drift correction remuxes with inverse `itsoffset`; residual recorded per sample over a short rehearsal.
+- Harness: `preview/run_av_sync.py` (`AV_SYNC_OK` via `--self-check`); gate `gates/av_sync.py`.
+- Results under `measurements/results/g5_av_sync_*.json`. No unpublished product sync target.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

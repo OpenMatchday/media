@@ -1,0 +1,354 @@
+{
+  "task": "OM-016",
+  "gate": "G5",
+  "started_at": "2026-11-10T16:07:21.066074+00:00",
+  "finished_at": "2026-11-10T16:07:27.334992+00:00",
+  "device": {
+    "hostname": "Leo",
+    "os": "Windows-10-10.0.26300-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "network": {
+    "medium": "wifi",
+    "note": "local lavfi mux + ffprobe start_time; not dual-device glass-to-glass"
+  },
+  "method": {
+    "inject": "ffmpeg -itsoffset on lavfi sine vs color",
+    "measure": "ffprobe stream start_time audio-video delta",
+    "correct": "remux with inverse itsoffset (delay late/early stream)",
+    "citations": [
+      "https://ffmpeg.org/ffmpeg-all.html#Main-options",
+      "https://ffmpeg.org/ffmpeg-filters.html#adelay",
+      "https://ffmpeg.org/ffprobe.html"
+    ]
+  },
+  "config": {
+    "base_offset_ms": 80.0,
+    "drift_per_sample_ms": 5.0,
+    "samples": 5,
+    "duration_s": 2.0,
+    "measure_tolerance_ms": 2.0,
+    "residual_tolerance_ms": 2.0,
+    "width": 320,
+    "height": 240,
+    "fps": 25
+  },
+  "samples": [
+    {
+      "index": 0,
+      "injected_offset_ms": 80.0,
+      "write": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_00.mkv",
+        "bytes": 187622,
+        "injected_offset_s": 0.08,
+        "injected_offset_ms": 80.0,
+        "duration_s": 2.0,
+        "stderr_tail": ""
+      },
+      "measured": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_00.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.000000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.080000"
+          }
+        ],
+        "video_start_s": 0.0,
+        "audio_start_s": 0.08,
+        "offset_ms": 80.0,
+        "ok": true
+      },
+      "correction": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_00.mkv",
+        "correction_ms": 80.0,
+        "method": "delay_video_to_match_late_audio",
+        "stderr_tail": ""
+      },
+      "residual": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_00.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.080000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.080000"
+          }
+        ],
+        "video_start_s": 0.08,
+        "audio_start_s": 0.08,
+        "offset_ms": 0.0,
+        "ok": true
+      },
+      "wall_s": 1.27
+    },
+    {
+      "index": 1,
+      "injected_offset_ms": 85.0,
+      "write": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_01.mkv",
+        "bytes": 185567,
+        "injected_offset_s": 0.085,
+        "injected_offset_ms": 85.0,
+        "duration_s": 2.0,
+        "stderr_tail": ""
+      },
+      "measured": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_01.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.000000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.085000"
+          }
+        ],
+        "video_start_s": 0.0,
+        "audio_start_s": 0.085,
+        "offset_ms": 85.0,
+        "ok": true
+      },
+      "correction": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_01.mkv",
+        "correction_ms": 85.0,
+        "method": "delay_video_to_match_late_audio",
+        "stderr_tail": ""
+      },
+      "residual": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_01.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.085000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.085000"
+          }
+        ],
+        "video_start_s": 0.085,
+        "audio_start_s": 0.085,
+        "offset_ms": 0.0,
+        "ok": true
+      },
+      "wall_s": 2.445
+    },
+    {
+      "index": 2,
+      "injected_offset_ms": 90.0,
+      "write": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_02.mkv",
+        "bytes": 185567,
+        "injected_offset_s": 0.09,
+        "injected_offset_ms": 90.0,
+        "duration_s": 2.0,
+        "stderr_tail": ""
+      },
+      "measured": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_02.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.000000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.090000"
+          }
+        ],
+        "video_start_s": 0.0,
+        "audio_start_s": 0.09,
+        "offset_ms": 90.0,
+        "ok": true
+      },
+      "correction": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_02.mkv",
+        "correction_ms": 90.0,
+        "method": "delay_video_to_match_late_audio",
+        "stderr_tail": ""
+      },
+      "residual": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_02.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.090000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.090000"
+          }
+        ],
+        "video_start_s": 0.09,
+        "audio_start_s": 0.09,
+        "offset_ms": 0.0,
+        "ok": true
+      },
+      "wall_s": 3.749
+    },
+    {
+      "index": 3,
+      "injected_offset_ms": 95.0,
+      "write": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_03.mkv",
+        "bytes": 185567,
+        "injected_offset_s": 0.095,
+        "injected_offset_ms": 95.0,
+        "duration_s": 2.0,
+        "stderr_tail": ""
+      },
+      "measured": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_03.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.000000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.095000"
+          }
+        ],
+        "video_start_s": 0.0,
+        "audio_start_s": 0.095,
+        "offset_ms": 95.0,
+        "ok": true
+      },
+      "correction": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_03.mkv",
+        "correction_ms": 95.0,
+        "method": "delay_video_to_match_late_audio",
+        "stderr_tail": ""
+      },
+      "residual": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_03.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.095000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.095000"
+          }
+        ],
+        "video_start_s": 0.095,
+        "audio_start_s": 0.095,
+        "offset_ms": 0.0,
+        "ok": true
+      },
+      "wall_s": 4.965
+    },
+    {
+      "index": 4,
+      "injected_offset_ms": 100.0,
+      "write": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_04.mkv",
+        "bytes": 185567,
+        "injected_offset_s": 0.1,
+        "injected_offset_ms": 100.0,
+        "duration_s": 2.0,
+        "stderr_tail": ""
+      },
+      "measured": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\raw_04.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.000000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.100000"
+          }
+        ],
+        "video_start_s": 0.0,
+        "audio_start_s": 0.1,
+        "offset_ms": 100.0,
+        "ok": true
+      },
+      "correction": {
+        "ok": true,
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_04.mkv",
+        "correction_ms": 100.0,
+        "method": "delay_video_to_match_late_audio",
+        "stderr_tail": ""
+      },
+      "residual": {
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\av_sync\\corrected_04.mkv",
+        "exists": true,
+        "streams": [
+          {
+            "index": 0,
+            "codec_type": "video",
+            "start_time": "0.100000"
+          },
+          {
+            "index": 1,
+            "codec_type": "audio",
+            "start_time": "0.100000"
+          }
+        ],
+        "video_start_s": 0.1,
+        "audio_start_s": 0.1,
+        "offset_ms": 0.0,
+        "ok": true
+      },
+      "wall_s": 6.268
+    }
+  ],
+  "summary": {
+    "max_abs_measured_ms": 100.0,
+    "max_residual_ms": 0.0,
+    "sample_count": 5,
+    "rehearsal_wall_s": 6.268
+  },
+  "wall_elapsed_s": 6.268,
+  "ok": true,
+  "self_check": false
+}

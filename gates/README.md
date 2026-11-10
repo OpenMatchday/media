@@ -36,3 +36,20 @@ python gates/two_cameras_audio.py
 ```
 
 Expect `TWO_CAMERAS_AUDIO_OK`. Self-check uses two lavfi `testsrc` paths plus lavfi `sine` audio meters.
+
+## Cut/Take G3 (OM-015)
+
+```bash
+python gates/cut_take.py
+```
+
+Expect `CUT_TAKE_OK`.
+
+## A/V sync + drift G5 (OM-016)
+
+```bash
+python gates/av_sync.py
+```
+
+Expect `AV_SYNC_OK`. Self-check injects lavfi audio `itsoffset`, measures
+ffprobe `start_time` delta, applies inverse correction, and records residual.

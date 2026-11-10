@@ -8,7 +8,7 @@ Baseline media gates G1–G7 are recorded here as dated JSON under `results/`.
 | G2 Transport glass-to-glass | Latency/loss on consumer router (D3) | started single-host SRT only (OM-013/014); dual-device consumer-router pending |
 | G3 Cut timing | Cut/Take Program switch | started (OM-015); identity-switch latency recorded in `results/g3_cut_take_*.json` |
 | G4 Compositing | Graphics over video | not started |
-| G5 A/V sync and drift | Sync tolerance | not started |
+| G5 A/V sync and drift | Sync tolerance | started (OM-016); lavfi inject + ffprobe residual in `results/g5_av_sync_*.json` |
 | G6 Recording | File playback | not started |
 | G7 Multiple outputs | Sustained combinations | not started |
 
