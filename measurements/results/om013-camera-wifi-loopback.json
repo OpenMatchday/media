@@ -1,0 +1,71 @@
+{
+  "task": "OM-013",
+  "gate_notes": {
+    "G1": "capture + encode path exercised; hardware preferred when available",
+    "G2": "SRT transport to director receive started; single-host path only"
+  },
+  "started_utc": "2026-11-10T11:37:59.336846+00:00",
+  "device": {
+    "hostname": "Leo",
+    "os": "Windows-10-10.0.26300-SP0",
+    "windows_product": "Windows 10 Pro",
+    "cpu": "AMD Ryzen 5 7535U with Radeon Graphics",
+    "camera": "ASUS HD webcam",
+    "python": "3.11.9",
+    "ffmpeg": "9.0.2-full_build"
+  },
+  "network": {
+    "medium": "wifi",
+    "bind_host": "127.0.0.1",
+    "wifi_adapter": "Realtek 8852BE Wireless LAN WiFi 6 PCI-E NIC",
+    "wifi_link_speed": "309.5 Mbps",
+    "wifi_ipv4": "10.200.78.185",
+    "path": "loopback",
+    "note": "loopback; not dual-device consumer-router glass-to-glass"
+  },
+  "transport": {
+    "name": "SRT",
+    "listen_url": "srt://127.0.0.1:9400?mode=listener&latency=120000",
+    "call_url": "srt://127.0.0.1:9400?mode=caller&latency=120000",
+    "configured_latency_us": 120000
+  },
+  "codec": {
+    "encoder": "h264_amf",
+    "hardware_preferred": true
+  },
+  "input": {
+    "source_mode": "camera",
+    "dshow_devices": [
+      "ASUS HD webcam",
+      "LSVCam"
+    ],
+    "device": "ASUS HD webcam",
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "seconds": 4.0
+  },
+  "director_preview": {
+    "snapshot_path": "preview/out/director_preview.jpg",
+    "snapshot_bytes": 5620,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    }
+  },
+  "timing": {
+    "wall_elapsed_s": 7.492582400000174
+  },
+  "sender_returncode": 0,
+  "receiver_returncode": 0,
+  "sender_stderr_tail": "[in#0/dshow @ 000001e35e8370c0] real-time buffer [ASUS HD webcam] [video input] too full or near too full (121% of size: 3041280 [rtbufsize parameter])! frame dropped!\r\n    Last message repeated 18 times\r\n[in#0/dshow @ 000001e35e8370c0] real-time buffer [ASUS HD webcam] [video input] too full or near too full (121% of size: 3041280 [rtbufsize parameter])! frame dropped!\r\n",
+  "receiver_stderr_tail": "",
+  "ok": true
+}

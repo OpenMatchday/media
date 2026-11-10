@@ -18,5 +18,13 @@ python gates/media_medium.py
 Expect `MEDIA_MEDIUM_GATE_OK`.
 
 Live interface detection is deferred to capture/transport wiring; the Flutter
-`MediaBridge.startMedia` and native MethodChannel stubs enforce the same
-allowlist before transport starts.
+`MediaBridge.startMedia` / `startPreview` and native MethodChannel stubs enforce
+the same allowlist before transport starts.
+
+## One camera Preview (OM-013)
+
+```bash
+python gates/one_camera_preview.py
+```
+
+Expect `ONE_CAMERA_PREVIEW_OK`. Requires `ffmpeg` with SRT (`--enable-libsrt` or distro equivalent).

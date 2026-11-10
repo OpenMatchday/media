@@ -1,0 +1,58 @@
+{
+  "task": "OM-013",
+  "gate_notes": {
+    "G1": "capture + encode path exercised; hardware preferred when available",
+    "G2": "SRT transport to director receive started; single-host path only"
+  },
+  "started_utc": "2026-11-10T11:37:52.769831+00:00",
+  "device": {
+    "hostname": "Leo",
+    "os": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9"
+  },
+  "network": {
+    "medium": "wifi",
+    "bind_host": "127.0.0.1",
+    "note": "loopback or NIC hairpin; not dual-device consumer-router glass-to-glass"
+  },
+  "transport": {
+    "name": "SRT",
+    "listen_url": "srt://127.0.0.1:9400?mode=listener&latency=120000",
+    "call_url": "srt://127.0.0.1:9400?mode=caller&latency=120000",
+    "configured_latency_us": 120000
+  },
+  "codec": {
+    "encoder": "libx264",
+    "hardware_preferred": false
+  },
+  "input": {
+    "source_mode": "testsrc",
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "seconds": 3.0
+  },
+  "director_preview": {
+    "snapshot_path": "preview/out/director_preview.jpg",
+    "snapshot_bytes": 20739,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    }
+  },
+  "timing": {
+    "wall_elapsed_s": 2.8167253999999957
+  },
+  "sender_returncode": 0,
+  "receiver_returncode": 0,
+  "sender_stderr_tail": "",
+  "receiver_stderr_tail": "",
+  "ok": true
+}

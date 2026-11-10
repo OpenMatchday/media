@@ -34,6 +34,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Gate script: `gates/media_medium.py` (`MEDIA_MEDIUM_GATE_OK`). Enforced in Flutter `MediaBridge.startMedia` and native MethodChannel stubs before transport starts.
 - Live NIC/transport detection deferred to capture path; citations in `gates/README.md`.
 
+## Notes (OM-013 / one camera Preview)
+
+- Path: capture -> encode (hardware preferred) -> SRT -> director receive snapshot.
+- Harness: `preview/run_one_camera.py` (`ONE_CAMERA_PREVIEW_OK` via `--self-check`).
+- Measurement log started under `measurements/` (G1/G2 start; dual-device glass-to-glass still pending).
+- App Director Preview bus control is in sibling `app`; this repo owns frames/transport.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

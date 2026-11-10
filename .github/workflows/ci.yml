@@ -20,3 +20,9 @@ jobs:
           test -f LICENSE
       - name: Media medium gate
         run: python3 gates/media_medium.py
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: One camera preview self-check
+        run: python3 gates/one_camera_preview.py
