@@ -34,3 +34,5 @@ jobs:
         run: python3 gates/av_sync.py
       - name: Source health + fallback self-check
         run: python3 gates/source_health.py
+      - name: Crash preservation self-check
+        run: python3 gates/crash_preservation.py

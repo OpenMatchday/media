@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "task": "OM-019",
+  "ac": "AC-5.6",
+  "self_check": true,
+  "medium": "wifi",
+  "host": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "director_alive_before": true,
+  "director_alive_after_kill": false,
+  "checkpoint_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\crash_preservation\\director_checkpoint.json",
+  "outputs_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\crash_preservation\\outputs.json",
+  "recovery": {
+    "restored": true,
+    "session_id": "sess-crash-harness",
+    "fields": {
+      "clock": {
+        "field": "clock",
+        "value": "08:42",
+        "authority": "manual",
+        "confirmed": true,
+        "locked": false
+      },
+      "home_score": {
+        "field": "home_score",
+        "value": 21,
+        "authority": "manual",
+        "confirmed": true,
+        "locked": false
+      },
+      "away_score": {
+        "field": "away_score",
+        "value": 18,
+        "authority": "manual",
+        "confirmed": true,
+        "locked": false
+      }
+    },
+    "lineup_authority": {
+      "home": {
+        "side": "home",
+        "authority": "manual",
+        "confirmed": true,
+        "locked": false,
+        "revision": "rev-home-1"
+      },
+      "away": {
+        "side": "away",
+        "authority": "manual",
+        "confirmed": true,
+        "locked": false,
+        "revision": "rev-away-1"
+      }
+    },
+    "event_log_seq": 7,
+    "clock_elapsed_ms": 522000,
+    "clock_running": false,
+    "outputs": {
+      "recording": false,
+      "streaming": false
+    },
+    "message": "restored authority; recording/streaming left stopped"
+  },
+  "elapsed_ms": 13.585,
+  "saved_at": "2026-11-10T16:48:45Z"
+}

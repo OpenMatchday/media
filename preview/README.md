@@ -55,3 +55,14 @@ python preview/run_source_health.py --fallback alternate_source
 ```
 
 Expect `SOURCE_HEALTH_OK`. Results: `measurements/results/om017_source_health_*.json`.
+
+## Crash preservation (OM-019)
+
+```text
+python preview/run_crash_preservation.py --self-check
+python preview/run_crash_preservation.py --medium ethernet
+```
+
+Expect `CRASH_PRESERVATION_OK`. Kills a director PID marker mid-event, restores
+clocks/scores/lineup authority, and leaves recording/streaming stopped (AC-5.6).
+Results: `measurements/results/om019_crash_preservation_*.json`.
