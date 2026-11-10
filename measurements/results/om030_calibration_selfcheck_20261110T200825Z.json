@@ -1,0 +1,190 @@
+{
+  "task": "OM-030",
+  "stamp": "20261110T200825Z",
+  "host": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "network": "n/a (local synthetic freeze; no network)",
+  "sources": [
+    "PROJECT_SPEC AC-4.1\u2013AC-4.6",
+    "OpenCV getPerspectiveTransform docs (4-point, h33=1)",
+    "sports/packages/basketball/scoreboards.json",
+    "sports/packages/futsal/scoreboards.json",
+    "ffmpeg filters perspective"
+  ],
+  "freeze": {
+    "ok": true,
+    "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\calibration\\frozen_board.jpg",
+    "bytes": 5621,
+    "width": 1280,
+    "height": 720,
+    "stderr_tail": ""
+  },
+  "corners": {
+    "tl": {
+      "x": 230.39999999999998,
+      "y": 158.4
+    },
+    "tr": {
+      "x": 1049.6,
+      "y": 129.6
+    },
+    "br": {
+      "x": 1126.4,
+      "y": 561.6
+    },
+    "bl": {
+      "x": 179.20000000000002,
+      "y": 518.4
+    }
+  },
+  "validation": {
+    "ok": true,
+    "reasons": [],
+    "area": 349655.04,
+    "winding": "ccw"
+  },
+  "bad_validation": {
+    "ok": false,
+    "reasons": [
+      "not_convex_or_crossed",
+      "corner_order_not_tl_tr_br_bl",
+      "area_below_minimum"
+    ],
+    "area": 0.0,
+    "winding": "degenerate"
+  },
+  "homography": [
+    [
+      0.0016517432653009982,
+      0.00023491459773169738,
+      -0.41777212060605073
+    ],
+    [
+      0.00012735179958552642,
+      0.0036224511882105236,
+      -0.6031381228370523
+    ],
+    [
+      0.00027065290467322064,
+      0.00048044177295441387,
+      1.0
+    ]
+  ],
+  "mapped_unit_board": [
+    [
+      4.8759843500181864e-17,
+      0.0
+    ],
+    [
+      1.0000000000000002,
+      8.246215131456732e-17
+    ],
+    [
+      1.0000000000000002,
+      1.0000000000000002
+    ],
+    [
+      8.556223219105483e-17,
+      1.0
+    ]
+  ],
+  "map_err": 4.440892098500626e-16,
+  "rectified": {
+    "ok": true,
+    "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\calibration\\rectified_board.jpg",
+    "bytes": 1361,
+    "width": 640,
+    "height": 290,
+    "stderr_tail": "",
+    "filter": "ffmpeg perspective sense=destination"
+  },
+  "scale_err": 3.3306690738754696e-16,
+  "rotation_err": 4.440892098500626e-16,
+  "rotated_validation": {
+    "ok": true,
+    "reasons": [],
+    "area": 349655.04000000004,
+    "winding": "ccw"
+  },
+  "roundtrip_err": 0.0,
+  "sport_id": "basketball/youth",
+  "region_fields": [
+    "clock",
+    "home_score",
+    "away_score",
+    "period",
+    "home_fouls",
+    "away_fouls"
+  ],
+  "regions": [
+    {
+      "field_id": "clock",
+      "x": 0.35,
+      "y": 0.1,
+      "w": 0.3,
+      "h": 0.18
+    },
+    {
+      "field_id": "home_score",
+      "x": 0.05,
+      "y": 0.15,
+      "w": 0.18,
+      "h": 0.25
+    },
+    {
+      "field_id": "away_score",
+      "x": 0.77,
+      "y": 0.15,
+      "w": 0.18,
+      "h": 0.25
+    },
+    {
+      "field_id": "period",
+      "x": 0.45,
+      "y": 0.55,
+      "w": 0.1,
+      "h": 0.12
+    },
+    {
+      "field_id": "home_fouls",
+      "x": 0.05,
+      "y": 0.7,
+      "w": 0.18,
+      "h": 0.15
+    },
+    {
+      "field_id": "away_fouls",
+      "x": 0.77,
+      "y": 0.7,
+      "w": 0.18,
+      "h": 0.15
+    }
+  ],
+  "region_reasons": [],
+  "futsal_fields": [
+    "clock",
+    "home_score",
+    "away_score",
+    "period",
+    "home_fouls",
+    "away_fouls"
+  ],
+  "checks": {
+    "freeze": true,
+    "validation": true,
+    "homography_map_err_lt_1e-6": true,
+    "rectified_preview": true,
+    "bad_corners_rejected": true,
+    "scale_resilience_err_lt_1e-6": true,
+    "rotation_resilience_err_lt_1e-6": true,
+    "regions_ok": true,
+    "youth_omits_shot_clock": true,
+    "futsal_omits_shot_clock": true,
+    "roundtrip_err_lt_1e-4": true
+  },
+  "ok": true
+}

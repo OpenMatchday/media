@@ -76,6 +76,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Results under `measurements/results/om026_output_combination_*.json`. Support flags stay unverified until OM-047; harness sustain does not auto-enable release.
 - App-side gates live in sibling `app` (`CapabilityMatrix` + Director Outputs panel).
 
+## Notes (OM-030 / four-corner calibration)
+
+- Freeze synthetic board frame, validate TL/TR/BR/BL (order, convexity, min area), compute 4-point homography (OpenCV getPerspectiveTransform form, h33=1), write rectified preview, define OCR regions with sport field allowlists.
+- Geometry: `calibration/geometry.py` + `calibration/regions.py`. Harness: `preview/run_calibration.py` (`CALIBRATION_OK`); gate `gates/calibration.py`.
+- Regions omit fields absent for a sport variant (e.g. no `shot_clock` for basketball/youth or futsal). Normalized corners reproject across scale/rotation (AC-4.6).
+- UI + Dart geometry mirror live in sibling `app` (`lib/calibration/`).
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

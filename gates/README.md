@@ -73,3 +73,13 @@ python gates/output_combination.py
 Expect `OUTPUT_COMBINATION_OK`. Self-check verifies release gates for
 `16:9` / `9:16` / `1:1` support flags plus concurrent lavfi sustain of
 recording + three live aspects. Does not promote capability-matrix cells.
+
+## Four-corner calibration (OM-030)
+
+```bash
+python gates/calibration.py
+```
+
+Expect `CALIBRATION_OK`. Self-check freezes a synthetic board, validates
+TL/TR/BR/BL, computes homography, writes a rectified preview, checks
+scale/rotation resilience, and verifies sport region allowlists.

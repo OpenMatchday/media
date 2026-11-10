@@ -38,3 +38,5 @@ jobs:
         run: python3 gates/crash_preservation.py
       - name: Output combination G7 self-check
         run: python3 gates/output_combination.py
+      - name: Four-corner calibration self-check
+        run: python3 gates/calibration.py
