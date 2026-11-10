@@ -9,6 +9,7 @@ Baseline media gates G1–G7 are recorded here as dated JSON under `results/`.
 | G3 Cut timing | Cut/Take Program switch | started (OM-015); identity-switch latency recorded in `results/g3_cut_take_*.json` |
 | G4 Compositing | Graphics over video | not started |
 | G5 A/V sync and drift | Sync tolerance | started (OM-016); lavfi inject + ffprobe residual in `results/g5_av_sync_*.json` |
+| (health / source loss) | AC-2.7 / AC-2.8 camera drop + Program fallback | started (OM-017); `results/om017_source_health_*.json` |
 | G6 Recording | File playback | not started |
 | G7 Multiple outputs | Sustained combinations | not started |
 

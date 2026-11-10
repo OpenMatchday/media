@@ -53,3 +53,13 @@ python gates/av_sync.py
 
 Expect `AV_SYNC_OK`. Self-check injects lavfi audio `itsoffset`, measures
 ffprobe `start_time` delta, applies inverse correction, and records residual.
+
+## Source health + fallback (OM-017)
+
+```bash
+python gates/source_health.py
+```
+
+Expect `SOURCE_HEALTH_OK`. Self-check walks connected/degraded/lost, drops
+cam-1, and applies freeze/slate/alternate Program safe states without ending
+the session.

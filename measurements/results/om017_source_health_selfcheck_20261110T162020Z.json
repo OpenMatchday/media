@@ -1,0 +1,123 @@
+{
+  "task": "OM-017",
+  "acs": [
+    "AC-2.7",
+    "AC-2.8"
+  ],
+  "started_at": "2026-11-10T16:20:19.153786+00:00",
+  "finished_at": "2026-11-10T16:20:20.814427+00:00",
+  "device": {
+    "hostname": "Leo",
+    "os": "Windows-10-10.0.26300-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "network": {
+    "medium": "wifi",
+    "note": "local lavfi plates + filesystem drop; not dual-device field loss"
+  },
+  "method": {
+    "plates": "ffmpeg lavfi color stills for cam-1/cam-2/slate",
+    "drop": "unlink cam-1 plate after Program copy",
+    "fallback": "slate",
+    "citations": [
+      "protocol/schemas/v0/common.json HealthState",
+      "protocol/schemas/v0/session.json program_fallback",
+      "https://ffmpeg.org/ffmpeg-filters.html#color"
+    ]
+  },
+  "config": {
+    "fallback": "slate",
+    "alternate_source_id": "cam-2",
+    "width": 320,
+    "height": 240,
+    "degrade_delay_s": 0.05,
+    "drop_delay_s": 0.05
+  },
+  "plates": {
+    "cam-1": {
+      "ok": true,
+      "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\source_health\\cam-1.jpg",
+      "bytes": 673,
+      "color": "0x1B4D3E",
+      "stderr_tail": ""
+    },
+    "cam-2": {
+      "ok": true,
+      "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\source_health\\cam-2.jpg",
+      "bytes": 672,
+      "color": "0x3D5A8B",
+      "stderr_tail": ""
+    },
+    "slate": {
+      "ok": true,
+      "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\source_health\\slate.jpg",
+      "bytes": 669,
+      "color": "0x202020",
+      "stderr_tail": ""
+    }
+  },
+  "health_timeline": [
+    {
+      "source_id": "cam-1",
+      "state": "connected",
+      "observed_at": "2026-11-10T16:20:20.701245+00:00"
+    },
+    {
+      "source_id": "cam-2",
+      "state": "connected",
+      "observed_at": "2026-11-10T16:20:20.701245+00:00"
+    },
+    {
+      "source_id": "cam-1",
+      "state": "degraded",
+      "observed_at": "2026-11-10T16:20:20.752046+00:00",
+      "detail": "simulated packet loss rising"
+    },
+    {
+      "source_id": "cam-1",
+      "state": "lost",
+      "observed_at": "2026-11-10T16:20:20.804073+00:00",
+      "detail": "camera drop test"
+    }
+  ],
+  "post_drop_health": [
+    {
+      "source_id": "cam-1",
+      "state": "lost",
+      "observed_at": "2026-11-10T16:20:20.804073+00:00",
+      "detail": "camera drop test"
+    },
+    {
+      "source_id": "cam-2",
+      "state": "connected",
+      "observed_at": "2026-11-10T16:20:20.814427+00:00"
+    }
+  ],
+  "fallback": {
+    "program_fallback": "slate",
+    "lost_source_id": "cam-1",
+    "program_source_id": "slate",
+    "program_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\source_health\\program.jpg",
+    "program_bytes": 669,
+    "fallback_apply_ms": 3.327,
+    "session_alive": true,
+    "message": "Program switched to slate",
+    "ok": true
+  },
+  "summary": {
+    "session_alive": true,
+    "states_seen": [
+      "connected",
+      "degraded",
+      "lost"
+    ],
+    "program_bytes_after": 669,
+    "fallback_apply_ms": 3.327,
+    "wall_s": 1.662
+  },
+  "wall_elapsed_s": 1.662,
+  "ok": true,
+  "self_check": true
+}

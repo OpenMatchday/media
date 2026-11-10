@@ -62,6 +62,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Harness: `preview/run_av_sync.py` (`AV_SYNC_OK` via `--self-check`); gate `gates/av_sync.py`.
 - Results under `measurements/results/g5_av_sync_*.json`. No unpublished product sync target.
 
+## Notes (OM-017 / connection health + source-loss fallback)
+
+- Per-source health states `connected` / `degraded` / `lost` with timestamps (AC-2.8; protocol HealthState).
+- On Program source drop, configured safe state applies: `last_frame_freeze`, `slate`, or `alternate_source` without ending the session (AC-2.7).
+- Harness: `preview/run_source_health.py` (`SOURCE_HEALTH_OK` via `--self-check`); gate `gates/source_health.py`.
+- Results under `measurements/results/om017_source_health_*.json`.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

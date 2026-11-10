@@ -46,3 +46,12 @@ python preview/run_av_sync.py --offset-ms 80 --drift-per-sample-ms 5 --samples 5
 ```
 
 Expect `AV_SYNC_OK`. Results: `measurements/results/g5_av_sync_*.json`.
+
+## Connection health + source-loss fallback (OM-017)
+
+```text
+python preview/run_source_health.py --self-check
+python preview/run_source_health.py --fallback alternate_source
+```
+
+Expect `SOURCE_HEALTH_OK`. Results: `measurements/results/om017_source_health_*.json`.
