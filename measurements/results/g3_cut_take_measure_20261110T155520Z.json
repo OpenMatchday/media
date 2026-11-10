@@ -1,0 +1,108 @@
+{
+  "task": "OM-015",
+  "gate": "G3",
+  "started_at": "2026-11-10T15:55:13.745488+00:00",
+  "finished_at": "2026-11-10T15:55:19.517231+00:00",
+  "device": {
+    "hostname": "Leo",
+    "os": "Windows-10-10.0.26300-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "network": {
+    "medium": "wifi",
+    "note": "control-plane Cut/Take + local Program bus identity; not dual-device glass-to-glass"
+  },
+  "action": "take",
+  "frames": {
+    "cam_1": {
+      "ok": true,
+      "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\cut_preview_cam1.jpg",
+      "bytes": 5623,
+      "label": "cam-1",
+      "color": "0x1B4D3E",
+      "stderr_tail": ""
+    },
+    "cam_2": {
+      "ok": true,
+      "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\cut_preview_cam2.jpg",
+      "bytes": 5623,
+      "label": "cam-2",
+      "color": "0x8B3D3D",
+      "stderr_tail": ""
+    }
+  },
+  "initial_program": {
+    "action": "cut",
+    "preview_source_id": "cam-1",
+    "previous_program_source_id": "",
+    "program_source_id": "cam-1",
+    "issued_at": "2026-11-10T15:55:14.485334+00:00",
+    "applied_at": "2026-11-10T15:55:14.488336+00:00",
+    "cut_latency_ms": 2.736,
+    "auto_switch": false,
+    "tally": {
+      "previous_off": null,
+      "program_on": "cam-1"
+    }
+  },
+  "cut": {
+    "action": "take",
+    "preview_source_id": "cam-2",
+    "previous_program_source_id": "cam-1",
+    "program_source_id": "cam-2",
+    "issued_at": "2026-11-10T15:55:14.821405+00:00",
+    "applied_at": "2026-11-10T15:55:14.824915+00:00",
+    "cut_latency_ms": 3.521,
+    "auto_switch": false,
+    "tally": {
+      "previous_off": "cam-1",
+      "program_on": "cam-2"
+    }
+  },
+  "program_before": {
+    "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\program\\director_program.jpg",
+    "exists": true,
+    "bytes": 5623,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    }
+  },
+  "program_after": {
+    "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\program\\director_program.jpg",
+    "exists": true,
+    "bytes": 5623,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "mjpeg",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    }
+  },
+  "program_matches_preview_cam2": true,
+  "srt": {
+    "ran": true,
+    "encoder": "h264_amf",
+    "ok": true,
+    "bytes": 5625,
+    "sender_rc": 0,
+    "receiver_rc": 0
+  },
+  "wall_elapsed_s": 5.77,
+  "ok": true,
+  "self_check": false
+}

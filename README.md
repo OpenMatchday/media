@@ -48,6 +48,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Audio source is selectable and recorded as not following video Program (AC-2.4); peak/RMS meters via ffmpeg `astats` (AC-2.5).
 - If only one usable dshow video device is present, cam-2 falls back to lavfi `testsrc` and that is written into the measurement JSON.
 
+## Notes (OM-015 / Cut/Take + G3)
+
+- Explicit Cut/Take switches Program to the current Preview source; no silent auto-switch (AC-2.2).
+- Harness: `preview/run_cut_take.py` (`CUT_TAKE_OK` via `--self-check`); gate `gates/cut_take.py`.
+- G3 records measured `cut_latency_ms` for Program identity apply under `measurements/results/`.
+- Tally on the Program camera is a control-plane side effect (AC-2.3); UI lives in sibling `app`.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
