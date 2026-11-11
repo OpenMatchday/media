@@ -84,6 +84,18 @@ Expect `RECORDING_OK`. Self-check starts a Program recording, stops it
 explicitly, probes video+audio, decodes a short playback window, and verifies
 crash recovery leaves recording stopped (no auto-restart).
 
+## Multiple live outputs G7 (OM-033)
+
+```bash
+python gates/live_outputs.py
+```
+
+Expect `LIVE_OUTPUTS_OK`. Self-check encodes independent layouts to MPEG-TS
+file destinations for `16:9` / `9:16` / `1:1`, runs one SRT loopback raw
+destination, enforces release gates for measured combinations only, and
+verifies crash recovery leaves streaming stopped. D8 social adapters are not
+required for these raw destinations.
+
 ## Four-corner calibration (OM-030)
 
 ```bash

@@ -40,6 +40,8 @@ jobs:
         run: python3 gates/output_combination.py
       - name: Recording G6 self-check
         run: python3 gates/recording.py
+      - name: Multiple live outputs G7 self-check
+        run: python3 gates/live_outputs.py
       - name: Four-corner calibration self-check
         run: python3 gates/calibration.py
       - name: OCR regions + camera-move self-check

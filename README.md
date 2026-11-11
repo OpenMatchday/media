@@ -83,6 +83,14 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Harness: `preview/run_recording.py` (`RECORDING_OK` via `--self-check`); gate `gates/recording.py`.
 - Results under `measurements/results/om032_recording_*.json`. Host-tool encode uses libx264/aac for measurement; product path prefers D4 hardware.
 
+## Notes (OM-033 / multiple live outputs + G7)
+
+- Independent layouts to raw stream destinations (MPEG-TS file + SRT loopback) for live `16:9` / `9:16` / `1:1` (AC-3.1 / AC-3.11).
+- Only measured combinations enabled in release (reuses OM-026 gates); harness never auto-promotes matrix cells.
+- D8 social/OAuth publishing is not required for raw destinations (see `docs/gates/g7-live-outputs.md` in sibling docs).
+- Harness: `preview/run_live_outputs.py` (`LIVE_OUTPUTS_OK`); gate `gates/live_outputs.py`.
+- Results under `measurements/results/om033_live_outputs_*.json`.
+
 ## Notes (OM-030 / four-corner calibration)
 
 - Freeze synthetic board frame, validate TL/TR/BR/BL (order, convexity, min area), compute 4-point homography (OpenCV getPerspectiveTransform form, h33=1), write rectified preview, define OCR regions with sport field allowlists.

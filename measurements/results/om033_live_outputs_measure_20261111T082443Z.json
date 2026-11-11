@@ -1,0 +1,239 @@
+{
+  "ok": true,
+  "task": "OM-033",
+  "ac": [
+    "AC-3.1",
+    "AC-3.11"
+  ],
+  "gate": "G7",
+  "self_check": false,
+  "medium": "ethernet",
+  "host": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "codec": {
+    "video": "libx264",
+    "audio": "aac",
+    "container": "mpegts",
+    "note": "raw stream destinations only; D8 social adapters not required (host-tool measurement encode; product path prefers D4 hardware)"
+  },
+  "destination_kinds": [
+    "file",
+    "srt"
+  ],
+  "independence": {
+    "ok": true,
+    "layout_ids": [
+      "live-16x9",
+      "live-9x16",
+      "live-1x1"
+    ],
+    "unique_ids": true,
+    "unique_coords": true
+  },
+  "gate_results": [
+    {
+      "name": "empty",
+      "allowed": true,
+      "expect_release": true,
+      "ok": true
+    },
+    {
+      "name": "live_only_unverified",
+      "allowed": false,
+      "expect_release": false,
+      "ok": true
+    },
+    {
+      "name": "measured_partial_live",
+      "allowed": true,
+      "expect_release": true,
+      "ok": true
+    },
+    {
+      "name": "combo_ok_aspect_missing",
+      "allowed": false,
+      "expect_release": false,
+      "ok": true
+    }
+  ],
+  "file_destinations": {
+    "ok": true,
+    "live_aspects": [
+      "16:9",
+      "9:16",
+      "1:1"
+    ],
+    "segment_seconds": 1.5,
+    "wall_ms": 1744.019,
+    "destinations": [
+      {
+        "aspect": "16:9",
+        "layout_id": "live-16x9",
+        "kind": "file",
+        "url": "file:C:/Users/leoga/Desktop/Creations/Open Matchday/media/preview/out/live_outputs/live_16x9_20261111T082437Z.ts",
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_16x9_20261111T082437Z.ts",
+        "layout_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_16x9_20261111T082437Z.layout.json",
+        "width": 1280,
+        "height": 720,
+        "ok": true,
+        "exit": 0,
+        "elapsed_ms": 846.045,
+        "probe": {
+          "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_16x9_20261111T082437Z.ts",
+          "exists": true,
+          "bytes": 53768,
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 1280,
+              "height": 720
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_type": "audio"
+            }
+          ],
+          "format_name": "mpegts",
+          "has_video": true,
+          "ok": true
+        },
+        "stderr_tail": ""
+      },
+      {
+        "aspect": "9:16",
+        "layout_id": "live-9x16",
+        "kind": "file",
+        "url": "file:C:/Users/leoga/Desktop/Creations/Open Matchday/media/preview/out/live_outputs/live_9x16_20261111T082437Z.ts",
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_9x16_20261111T082437Z.ts",
+        "layout_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_9x16_20261111T082437Z.layout.json",
+        "width": 720,
+        "height": 1280,
+        "ok": true,
+        "exit": 0,
+        "elapsed_ms": 1173.147,
+        "probe": {
+          "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_9x16_20261111T082437Z.ts",
+          "exists": true,
+          "bytes": 50196,
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 720,
+              "height": 1280
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_type": "audio"
+            }
+          ],
+          "format_name": "mpegts",
+          "has_video": true,
+          "ok": true
+        },
+        "stderr_tail": ""
+      },
+      {
+        "aspect": "1:1",
+        "layout_id": "live-1x1",
+        "kind": "file",
+        "url": "file:C:/Users/leoga/Desktop/Creations/Open Matchday/media/preview/out/live_outputs/live_1x1_20261111T082437Z.ts",
+        "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_1x1_20261111T082437Z.ts",
+        "layout_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_1x1_20261111T082437Z.layout.json",
+        "width": 720,
+        "height": 720,
+        "ok": true,
+        "exit": 0,
+        "elapsed_ms": 1283.544,
+        "probe": {
+          "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\live_1x1_20261111T082437Z.ts",
+          "exists": true,
+          "bytes": 49820,
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 720,
+              "height": 720
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_type": "audio"
+            }
+          ],
+          "format_name": "mpegts",
+          "has_video": true,
+          "ok": true
+        },
+        "stderr_tail": ""
+      }
+    ],
+    "sustained": true
+  },
+  "srt_loopback": {
+    "ok": true,
+    "aspect": "16:9",
+    "layout_id": "live-16x9",
+    "kind": "srt",
+    "url": "srt://127.0.0.1:52458?mode=caller&latency=120",
+    "listen_url": "srt://127.0.0.1:52458?mode=listener&latency=120",
+    "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\srt_capture_16x9_20261111T082439Z.ts",
+    "layout_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\srt_capture_16x9_20261111T082439Z.layout.json",
+    "width": 1280,
+    "height": 720,
+    "publisher_exit": 0,
+    "listener_exit": 0,
+    "probe": {
+      "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\srt_capture_16x9_20261111T082439Z.ts",
+      "exists": true,
+      "bytes": 50384,
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "format_name": "mpegts",
+      "has_video": true,
+      "ok": true
+    },
+    "publisher_stderr_tail": "",
+    "listener_stderr_tail": "[in#0/mpegts @ 0000024cf875bfc0] Error during demuxing: I/O error\n"
+  },
+  "crash_no_restart": {
+    "ok": true,
+    "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\crash_live_20261111T082443Z.ts",
+    "state_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\crash_live_state_20261111T082443Z.json",
+    "checkpoint_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\live_outputs\\crash_live_checkpoint_20261111T082443Z.json",
+    "checkpoint_had_streaming": true,
+    "recovered": {
+      "recording": false,
+      "streaming": false,
+      "auto_restarted": false,
+      "message": "outputs left stopped after crash recovery"
+    },
+    "auto_restarted": false
+  },
+  "combination_key": "16:9+1:1+9:16",
+  "release_enablement": false,
+  "saved_at": "2026-11-11T08:24:43Z"
+}
