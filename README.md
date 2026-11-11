@@ -76,6 +76,13 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 - Results under `measurements/results/om026_output_combination_*.json`. Support flags stay unverified until OM-047; harness sustain does not auto-enable release.
 - App-side gates live in sibling `app` (`CapabilityMatrix` + Director Outputs panel).
 
+## Notes (OM-032 / recording + G6)
+
+- Explicit start/stop of Program recording; completed file probes for video+audio and decodes for playback (G6 / AC-3.1 recording path).
+- Crash mid-record leaves recording stopped; never auto-restarts (AC-5.6 with OM-019).
+- Harness: `preview/run_recording.py` (`RECORDING_OK` via `--self-check`); gate `gates/recording.py`.
+- Results under `measurements/results/om032_recording_*.json`. Host-tool encode uses libx264/aac for measurement; product path prefers D4 hardware.
+
 ## Notes (OM-030 / four-corner calibration)
 
 - Freeze synthetic board frame, validate TL/TR/BR/BL (order, convexity, min area), compute 4-point homography (OpenCV getPerspectiveTransform form, h33=1), write rectified preview, define OCR regions with sport field allowlists.

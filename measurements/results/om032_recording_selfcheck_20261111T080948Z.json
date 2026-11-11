@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "task": "OM-032",
+  "ac": [
+    "AC-3.1",
+    "AC-5.6"
+  ],
+  "gate": "G6",
+  "self_check": true,
+  "medium": "ethernet",
+  "host": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "codec": {
+    "video": "libx264",
+    "audio": "aac",
+    "note": "host-tool measurement encode; product path prefers D4 hardware"
+  },
+  "start_stop": {
+    "ok": true,
+    "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\recording\\program_20261111T080944Z.mp4",
+    "state_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\recording\\recording_state.json",
+    "record_s": 1.5,
+    "wall_ms": 3018.064,
+    "stop": {
+      "ok": true,
+      "exit": 0,
+      "elapsed_ms": 393.08,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "probe": {
+      "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\recording\\program_20261111T080944Z.mp4",
+      "exists": true,
+      "bytes": 251433,
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "duration": "10.300000"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "duration": "10.304000"
+        }
+      ],
+      "format": {
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "duration": "10.304000"
+      },
+      "has_video": true,
+      "has_audio": true,
+      "duration_s": 10.304,
+      "ok": true
+    },
+    "playback": {
+      "ok": true,
+      "exit": 0,
+      "elapsed_ms": 291.867,
+      "frames_requested": 15,
+      "stderr_tail": ""
+    },
+    "size": {
+      "width": 1280,
+      "height": 720,
+      "fps": 30
+    }
+  },
+  "crash_no_restart": {
+    "ok": true,
+    "path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\recording\\crash_20261111T080947Z.mp4",
+    "state_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\recording\\crash_state_20261111T080947Z.json",
+    "checkpoint_path": "C:\\Users\\leoga\\Desktop\\Creations\\Open Matchday\\media\\preview\\out\\recording\\crash_checkpoint_20261111T080947Z.json",
+    "checkpoint_had_recording": true,
+    "recovered": {
+      "recording": false,
+      "streaming": false,
+      "auto_restarted": false,
+      "message": "outputs left stopped after crash recovery"
+    },
+    "auto_restarted": false,
+    "file_exists_after_crash": true,
+    "file_bytes": 48
+  },
+  "saved_at": "2026-11-11T08:09:48Z"
+}

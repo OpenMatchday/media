@@ -74,6 +74,16 @@ Expect `OUTPUT_COMBINATION_OK`. Self-check verifies release gates for
 `16:9` / `9:16` / `1:1` support flags plus concurrent lavfi sustain of
 recording + three live aspects. Does not promote capability-matrix cells.
 
+## Recording G6 (OM-032)
+
+```bash
+python gates/recording.py
+```
+
+Expect `RECORDING_OK`. Self-check starts a Program recording, stops it
+explicitly, probes video+audio, decodes a short playback window, and verifies
+crash recovery leaves recording stopped (no auto-restart).
+
 ## Four-corner calibration (OM-030)
 
 ```bash
